@@ -1,0 +1,1121 @@
+{
+  "episodes": 480,
+  "prime_rollouts": 24,
+  "independent_mazes": 12,
+  "calibration_accuracy_min": 1.0,
+  "unapplied_intervention_episodes": 0,
+  "disrupted": {
+    "selective": {
+      "n": 96,
+      "successes": 96,
+      "success": 1.0,
+      "memory_damage": 0.0,
+      "capped_latency": 20.8125,
+      "pose_accuracy": 0.9878045866762099,
+      "seconds": 0.2608105763574713,
+      "abstentions": 2.2291666666666665,
+      "false_or_change_alarm_episodes": 92,
+      "first_diagnoses": {
+        "drift": 46,
+        "reward": 24,
+        "route": 22,
+        "none": 4
+      },
+      "channel_damage": {
+        "geometry": 0.0,
+        "reward": 0.0,
+        "landmark": 0.0
+      }
+    },
+    "ungated": {
+      "n": 96,
+      "successes": 96,
+      "success": 1.0,
+      "memory_damage": 0.0014957264957264956,
+      "capped_latency": 18.9375,
+      "pose_accuracy": 0.9698330491616937,
+      "seconds": 0.533839835545829,
+      "abstentions": 0.8958333333333334,
+      "false_or_change_alarm_episodes": 72,
+      "first_diagnoses": {
+        "drift": 48,
+        "reward": 24,
+        "none": 24
+      },
+      "channel_damage": {
+        "geometry": 0.0007505175983436853,
+        "reward": 0.0,
+        "landmark": 0.005952380952380952
+      }
+    },
+    "no_localization": {
+      "n": 96,
+      "successes": 50,
+      "success": 0.5208333333333334,
+      "memory_damage": 0.04055631868131868,
+      "capped_latency": 68.29166666666667,
+      "pose_accuracy": 0.5,
+      "seconds": 1.47299055074897,
+      "abstentions": 3.1875,
+      "false_or_change_alarm_episodes": 28,
+      "first_diagnoses": {
+        "none": 68,
+        "reward": 28
+      },
+      "channel_damage": {
+        "geometry": 0.03325138026224983,
+        "reward": 0.0035714285714285713,
+        "landmark": 0.10654761904761904
+      }
+    },
+    "tabular": {
+      "n": 96,
+      "successes": 96,
+      "success": 1.0,
+      "memory_damage": 0.0,
+      "capped_latency": 20.8125,
+      "pose_accuracy": 0.9878045866762099,
+      "seconds": 0.008056754309412403,
+      "abstentions": 2.2291666666666665,
+      "false_or_change_alarm_episodes": 92,
+      "first_diagnoses": {
+        "drift": 46,
+        "reward": 24,
+        "route": 22,
+        "none": 4
+      },
+      "channel_damage": {
+        "geometry": 0.0,
+        "reward": 0.0,
+        "landmark": 0.0
+      }
+    }
+  },
+  "by_scenario": {
+    "stable": {
+      "selective": {
+        "n": 24,
+        "successes": 24,
+        "success": 1.0,
+        "memory_damage": 0.0,
+        "capped_latency": 14.083333333333334,
+        "pose_accuracy": 1.0,
+        "seconds": 0.21570208149933023,
+        "abstentions": 0.0,
+        "false_or_change_alarm_episodes": 0,
+        "first_diagnoses": {
+          "none": 24
+        },
+        "channel_damage": {
+          "geometry": 0.0,
+          "reward": 0.0,
+          "landmark": 0.0
+        }
+      },
+      "ungated": {
+        "n": 24,
+        "successes": 24,
+        "success": 1.0,
+        "memory_damage": 0.0,
+        "capped_latency": 14.083333333333334,
+        "pose_accuracy": 1.0,
+        "seconds": 0.43775119616960484,
+        "abstentions": 0.0,
+        "false_or_change_alarm_episodes": 0,
+        "first_diagnoses": {
+          "none": 24
+        },
+        "channel_damage": {
+          "geometry": 0.0,
+          "reward": 0.0,
+          "landmark": 0.0
+        }
+      },
+      "no_localization": {
+        "n": 24,
+        "successes": 24,
+        "success": 1.0,
+        "memory_damage": 0.0,
+        "capped_latency": 14.083333333333334,
+        "pose_accuracy": 1.0,
+        "seconds": 0.4333526909564777,
+        "abstentions": 0.0,
+        "false_or_change_alarm_episodes": 0,
+        "first_diagnoses": {
+          "none": 24
+        },
+        "channel_damage": {
+          "geometry": 0.0,
+          "reward": 0.0,
+          "landmark": 0.0
+        }
+      },
+      "tabular": {
+        "n": 24,
+        "successes": 24,
+        "success": 1.0,
+        "memory_damage": 0.0,
+        "capped_latency": 14.083333333333334,
+        "pose_accuracy": 1.0,
+        "seconds": 0.005473342035353805,
+        "abstentions": 0.0,
+        "false_or_change_alarm_episodes": 0,
+        "first_diagnoses": {
+          "none": 24
+        },
+        "channel_damage": {
+          "geometry": 0.0,
+          "reward": 0.0,
+          "landmark": 0.0
+        }
+      }
+    },
+    "reward": {
+      "selective": {
+        "n": 24,
+        "successes": 24,
+        "success": 1.0,
+        "memory_damage": 0.0,
+        "capped_latency": 22.0,
+        "pose_accuracy": 1.0,
+        "seconds": 0.2754803818364356,
+        "abstentions": 0.0,
+        "false_or_change_alarm_episodes": 24,
+        "first_diagnoses": {
+          "reward": 24
+        },
+        "channel_damage": {
+          "geometry": 0.0,
+          "reward": 0.0,
+          "landmark": 0.0
+        }
+      },
+      "ungated": {
+        "n": 24,
+        "successes": 24,
+        "success": 1.0,
+        "memory_damage": 0.0,
+        "capped_latency": 22.0,
+        "pose_accuracy": 1.0,
+        "seconds": 0.5912524791638134,
+        "abstentions": 0.0,
+        "false_or_change_alarm_episodes": 24,
+        "first_diagnoses": {
+          "reward": 24
+        },
+        "channel_damage": {
+          "geometry": 0.0,
+          "reward": 0.0,
+          "landmark": 0.0
+        }
+      },
+      "no_localization": {
+        "n": 24,
+        "successes": 24,
+        "success": 1.0,
+        "memory_damage": 0.0,
+        "capped_latency": 22.0,
+        "pose_accuracy": 1.0,
+        "seconds": 0.5863384252855516,
+        "abstentions": 0.0,
+        "false_or_change_alarm_episodes": 24,
+        "first_diagnoses": {
+          "reward": 24
+        },
+        "channel_damage": {
+          "geometry": 0.0,
+          "reward": 0.0,
+          "landmark": 0.0
+        }
+      },
+      "tabular": {
+        "n": 24,
+        "successes": 24,
+        "success": 1.0,
+        "memory_damage": 0.0,
+        "capped_latency": 22.0,
+        "pose_accuracy": 1.0,
+        "seconds": 0.008830161498432668,
+        "abstentions": 0.0,
+        "false_or_change_alarm_episodes": 24,
+        "first_diagnoses": {
+          "reward": 24
+        },
+        "channel_damage": {
+          "geometry": 0.0,
+          "reward": 0.0,
+          "landmark": 0.0
+        }
+      }
+    },
+    "route": {
+      "selective": {
+        "n": 24,
+        "successes": 24,
+        "success": 1.0,
+        "memory_damage": 0.0,
+        "capped_latency": 22.916666666666668,
+        "pose_accuracy": 1.0,
+        "seconds": 0.2670094860853472,
+        "abstentions": 3.8333333333333335,
+        "false_or_change_alarm_episodes": 20,
+        "first_diagnoses": {
+          "route": 20,
+          "none": 4
+        },
+        "channel_damage": {
+          "geometry": 0.0,
+          "reward": 0.0,
+          "landmark": 0.0
+        }
+      },
+      "ungated": {
+        "n": 24,
+        "successes": 24,
+        "success": 1.0,
+        "memory_damage": 0.0,
+        "capped_latency": 18.916666666666668,
+        "pose_accuracy": 1.0,
+        "seconds": 0.5302450606541242,
+        "abstentions": 1.0833333333333333,
+        "false_or_change_alarm_episodes": 0,
+        "first_diagnoses": {
+          "none": 24
+        },
+        "channel_damage": {
+          "geometry": 0.0,
+          "reward": 0.0,
+          "landmark": 0.0
+        }
+      },
+      "no_localization": {
+        "n": 24,
+        "successes": 24,
+        "success": 1.0,
+        "memory_damage": 0.0,
+        "capped_latency": 18.916666666666668,
+        "pose_accuracy": 1.0,
+        "seconds": 0.5279447500045839,
+        "abstentions": 1.0833333333333333,
+        "false_or_change_alarm_episodes": 0,
+        "first_diagnoses": {
+          "none": 24
+        },
+        "channel_damage": {
+          "geometry": 0.0,
+          "reward": 0.0,
+          "landmark": 0.0
+        }
+      },
+      "tabular": {
+        "n": 24,
+        "successes": 24,
+        "success": 1.0,
+        "memory_damage": 0.0,
+        "capped_latency": 22.916666666666668,
+        "pose_accuracy": 1.0,
+        "seconds": 0.009020645821389431,
+        "abstentions": 3.8333333333333335,
+        "false_or_change_alarm_episodes": 20,
+        "first_diagnoses": {
+          "route": 20,
+          "none": 4
+        },
+        "channel_damage": {
+          "geometry": 0.0,
+          "reward": 0.0,
+          "landmark": 0.0
+        }
+      }
+    },
+    "drift": {
+      "selective": {
+        "n": 24,
+        "successes": 24,
+        "success": 1.0,
+        "memory_damage": 0.0,
+        "capped_latency": 14.25,
+        "pose_accuracy": 0.9825980392156862,
+        "seconds": 0.22670831420691684,
+        "abstentions": 0.25,
+        "false_or_change_alarm_episodes": 24,
+        "first_diagnoses": {
+          "drift": 24
+        },
+        "channel_damage": {
+          "geometry": 0.0,
+          "reward": 0.0,
+          "landmark": 0.0
+        }
+      },
+      "ungated": {
+        "n": 24,
+        "successes": 24,
+        "success": 1.0,
+        "memory_damage": 0.002777777777777778,
+        "capped_latency": 14.916666666666666,
+        "pose_accuracy": 0.9349602159704461,
+        "seconds": 0.46042916157845565,
+        "abstentions": 0.8333333333333334,
+        "false_or_change_alarm_episodes": 24,
+        "first_diagnoses": {
+          "drift": 24
+        },
+        "channel_damage": {
+          "geometry": 0.0011904761904761904,
+          "reward": 0.0,
+          "landmark": 0.011904761904761904
+        }
+      },
+      "no_localization": {
+        "n": 24,
+        "successes": 2,
+        "success": 0.08333333333333333,
+        "memory_damage": 0.08690476190476192,
+        "capped_latency": 112.25,
+        "pose_accuracy": 0.0,
+        "seconds": 2.3137809097485538,
+        "abstentions": 6.083333333333333,
+        "false_or_change_alarm_episodes": 2,
+        "first_diagnoses": {
+          "none": 22,
+          "reward": 2
+        },
+        "channel_damage": {
+          "geometry": 0.07261904761904762,
+          "reward": 0.007142857142857143,
+          "landmark": 0.22380952380952382
+        }
+      },
+      "tabular": {
+        "n": 24,
+        "successes": 24,
+        "success": 1.0,
+        "memory_damage": 0.0,
+        "capped_latency": 14.25,
+        "pose_accuracy": 0.9825980392156862,
+        "seconds": 0.00541417341446504,
+        "abstentions": 0.25,
+        "false_or_change_alarm_episodes": 24,
+        "first_diagnoses": {
+          "drift": 24
+        },
+        "channel_damage": {
+          "geometry": 0.0,
+          "reward": 0.0,
+          "landmark": 0.0
+        }
+      }
+    },
+    "combined": {
+      "selective": {
+        "n": 24,
+        "successes": 24,
+        "success": 1.0,
+        "memory_damage": 0.0,
+        "capped_latency": 24.083333333333332,
+        "pose_accuracy": 0.968620307489153,
+        "seconds": 0.2740441233011855,
+        "abstentions": 4.833333333333333,
+        "false_or_change_alarm_episodes": 24,
+        "first_diagnoses": {
+          "drift": 22,
+          "route": 2
+        },
+        "channel_damage": {
+          "geometry": 0.0,
+          "reward": 0.0,
+          "landmark": 0.0
+        }
+      },
+      "ungated": {
+        "n": 24,
+        "successes": 24,
+        "success": 1.0,
+        "memory_damage": 0.0032051282051282055,
+        "capped_latency": 19.916666666666668,
+        "pose_accuracy": 0.9443719806763284,
+        "seconds": 0.553432640786923,
+        "abstentions": 1.6666666666666667,
+        "false_or_change_alarm_episodes": 24,
+        "first_diagnoses": {
+          "drift": 24
+        },
+        "channel_damage": {
+          "geometry": 0.0018115942028985507,
+          "reward": 0.0,
+          "landmark": 0.011904761904761904
+        }
+      },
+      "no_localization": {
+        "n": 24,
+        "successes": 0,
+        "success": 0.0,
+        "memory_damage": 0.07532051282051282,
+        "capped_latency": 120.0,
+        "pose_accuracy": 0.0,
+        "seconds": 2.4638981179571906,
+        "abstentions": 5.583333333333333,
+        "false_or_change_alarm_episodes": 2,
+        "first_diagnoses": {
+          "none": 22,
+          "reward": 2
+        },
+        "channel_damage": {
+          "geometry": 0.06038647342995169,
+          "reward": 0.007142857142857143,
+          "landmark": 0.20238095238095236
+        }
+      },
+      "tabular": {
+        "n": 24,
+        "successes": 24,
+        "success": 1.0,
+        "memory_damage": 0.0,
+        "capped_latency": 24.083333333333332,
+        "pose_accuracy": 0.968620307489153,
+        "seconds": 0.00896203650336247,
+        "abstentions": 4.833333333333333,
+        "false_or_change_alarm_episodes": 24,
+        "first_diagnoses": {
+          "drift": 22,
+          "route": 2
+        },
+        "channel_damage": {
+          "geometry": 0.0,
+          "reward": 0.0,
+          "landmark": 0.0
+        }
+      }
+    }
+  },
+  "paired_contrasts": {
+    "ungated": {
+      "memory_damage": {
+        "mean": -0.0014957264957264958,
+        "ci95": [
+          -0.003291027548840049,
+          0.0
+        ],
+        "maze_differences": {
+          "201": 0.0,
+          "202": 0.0,
+          "203": 0.0,
+          "204": -0.008367673992673994,
+          "205": 0.0,
+          "206": -0.007177197802197803,
+          "207": -0.002403846153846154,
+          "208": 0.0,
+          "209": 0.0,
+          "210": 0.0,
+          "211": 0.0,
+          "212": 0.0
+        }
+      },
+      "success": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "maze_differences": {
+          "201": 0.0,
+          "202": 0.0,
+          "203": 0.0,
+          "204": 0.0,
+          "205": 0.0,
+          "206": 0.0,
+          "207": 0.0,
+          "208": 0.0,
+          "209": 0.0,
+          "210": 0.0,
+          "211": 0.0,
+          "212": 0.0
+        }
+      },
+      "capped_latency": {
+        "mean": 1.875,
+        "ci95": [
+          0.7083333333333334,
+          3.1666666666666665
+        ],
+        "maze_differences": {
+          "201": 7.0,
+          "202": 5.0,
+          "203": 3.0,
+          "204": -2.0,
+          "205": 0.0,
+          "206": 1.5,
+          "207": 2.0,
+          "208": 1.0,
+          "209": 1.0,
+          "210": 2.0,
+          "211": 1.0,
+          "212": 1.0
+        }
+      }
+    },
+    "no_localization": {
+      "memory_damage": {
+        "mean": -0.04055631868131868,
+        "ci95": [
+          -0.052421016483516485,
+          -0.029904036935286944
+        ],
+        "maze_differences": {
+          "201": -0.05502518315018315,
+          "202": -0.05024038461538462,
+          "203": -0.031101190476190477,
+          "204": -0.01793727106227106,
+          "205": -0.08486721611721612,
+          "206": -0.02631639194139194,
+          "207": -0.06578525641025641,
+          "208": -0.01793727106227106,
+          "209": -0.049038461538461545,
+          "210": -0.02631639194139194,
+          "211": -0.023923992673992672,
+          "212": -0.03818681318681319
+        }
+      },
+      "success": {
+        "mean": 0.4791666666666667,
+        "ci95": [
+          0.4375,
+          0.5
+        ],
+        "maze_differences": {
+          "201": 0.25,
+          "202": 0.5,
+          "203": 0.5,
+          "204": 0.5,
+          "205": 0.5,
+          "206": 0.5,
+          "207": 0.5,
+          "208": 0.5,
+          "209": 0.5,
+          "210": 0.5,
+          "211": 0.5,
+          "212": 0.5
+        }
+      },
+      "capped_latency": {
+        "mean": -47.479166666666664,
+        "ci95": [
+          -50.75,
+          -42.5625
+        ],
+        "maze_differences": {
+          "201": -22.75,
+          "202": -46.0,
+          "203": -45.5,
+          "204": -51.0,
+          "205": -53.0,
+          "206": -48.5,
+          "207": -51.0,
+          "208": -52.5,
+          "209": -48.5,
+          "210": -48.5,
+          "211": -51.0,
+          "212": -51.5
+        }
+      }
+    },
+    "tabular": {
+      "memory_damage": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "maze_differences": {
+          "201": 0.0,
+          "202": 0.0,
+          "203": 0.0,
+          "204": 0.0,
+          "205": 0.0,
+          "206": 0.0,
+          "207": 0.0,
+          "208": 0.0,
+          "209": 0.0,
+          "210": 0.0,
+          "211": 0.0,
+          "212": 0.0
+        }
+      },
+      "success": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "maze_differences": {
+          "201": 0.0,
+          "202": 0.0,
+          "203": 0.0,
+          "204": 0.0,
+          "205": 0.0,
+          "206": 0.0,
+          "207": 0.0,
+          "208": 0.0,
+          "209": 0.0,
+          "210": 0.0,
+          "211": 0.0,
+          "212": 0.0
+        }
+      },
+      "capped_latency": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "maze_differences": {
+          "201": 0.0,
+          "202": 0.0,
+          "203": 0.0,
+          "204": 0.0,
+          "205": 0.0,
+          "206": 0.0,
+          "207": 0.0,
+          "208": 0.0,
+          "209": 0.0,
+          "210": 0.0,
+          "211": 0.0,
+          "212": 0.0
+        }
+      }
+    }
+  },
+  "failures": [
+    {
+      "seed": 201,
+      "neural_seed": 31,
+      "scenario": "combined",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.11057692307692307
+    },
+    {
+      "seed": 201,
+      "neural_seed": 47,
+      "scenario": "combined",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.11057692307692307
+    },
+    {
+      "seed": 202,
+      "neural_seed": 31,
+      "scenario": "combined",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.10096153846153846
+    },
+    {
+      "seed": 202,
+      "neural_seed": 31,
+      "scenario": "drift",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.1
+    },
+    {
+      "seed": 202,
+      "neural_seed": 47,
+      "scenario": "combined",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.10096153846153846
+    },
+    {
+      "seed": 202,
+      "neural_seed": 47,
+      "scenario": "drift",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.1
+    },
+    {
+      "seed": 203,
+      "neural_seed": 31,
+      "scenario": "combined",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.0625
+    },
+    {
+      "seed": 203,
+      "neural_seed": 31,
+      "scenario": "drift",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.06190476190476191
+    },
+    {
+      "seed": 203,
+      "neural_seed": 47,
+      "scenario": "combined",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.0625
+    },
+    {
+      "seed": 203,
+      "neural_seed": 47,
+      "scenario": "drift",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.06190476190476191
+    },
+    {
+      "seed": 204,
+      "neural_seed": 31,
+      "scenario": "combined",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.03365384615384615
+    },
+    {
+      "seed": 204,
+      "neural_seed": 31,
+      "scenario": "drift",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.0380952380952381
+    },
+    {
+      "seed": 204,
+      "neural_seed": 47,
+      "scenario": "combined",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.03365384615384615
+    },
+    {
+      "seed": 204,
+      "neural_seed": 47,
+      "scenario": "drift",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.0380952380952381
+    },
+    {
+      "seed": 205,
+      "neural_seed": 31,
+      "scenario": "combined",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.14423076923076922
+    },
+    {
+      "seed": 205,
+      "neural_seed": 31,
+      "scenario": "drift",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.19523809523809524
+    },
+    {
+      "seed": 205,
+      "neural_seed": 47,
+      "scenario": "combined",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.14423076923076922
+    },
+    {
+      "seed": 205,
+      "neural_seed": 47,
+      "scenario": "drift",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.19523809523809524
+    },
+    {
+      "seed": 206,
+      "neural_seed": 31,
+      "scenario": "combined",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.052884615384615384
+    },
+    {
+      "seed": 206,
+      "neural_seed": 31,
+      "scenario": "drift",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.05238095238095238
+    },
+    {
+      "seed": 206,
+      "neural_seed": 47,
+      "scenario": "combined",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.052884615384615384
+    },
+    {
+      "seed": 206,
+      "neural_seed": 47,
+      "scenario": "drift",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.05238095238095238
+    },
+    {
+      "seed": 207,
+      "neural_seed": 31,
+      "scenario": "combined",
+      "method": "no_localization",
+      "first_diagnosis": {
+        "step": 35,
+        "label": "reward",
+        "confidence": 0.8807970779778823
+      },
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.12980769230769232
+    },
+    {
+      "seed": 207,
+      "neural_seed": 31,
+      "scenario": "drift",
+      "method": "no_localization",
+      "first_diagnosis": {
+        "step": 9,
+        "label": "reward",
+        "confidence": 0.8807970779778823
+      },
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.13333333333333333
+    },
+    {
+      "seed": 207,
+      "neural_seed": 47,
+      "scenario": "combined",
+      "method": "no_localization",
+      "first_diagnosis": {
+        "step": 35,
+        "label": "reward",
+        "confidence": 0.8807970779778823
+      },
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.12980769230769232
+    },
+    {
+      "seed": 207,
+      "neural_seed": 47,
+      "scenario": "drift",
+      "method": "no_localization",
+      "first_diagnosis": {
+        "step": 9,
+        "label": "reward",
+        "confidence": 0.8807970779778823
+      },
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.13333333333333333
+    },
+    {
+      "seed": 208,
+      "neural_seed": 31,
+      "scenario": "combined",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.03365384615384615
+    },
+    {
+      "seed": 208,
+      "neural_seed": 31,
+      "scenario": "drift",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.0380952380952381
+    },
+    {
+      "seed": 208,
+      "neural_seed": 47,
+      "scenario": "combined",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.03365384615384615
+    },
+    {
+      "seed": 208,
+      "neural_seed": 47,
+      "scenario": "drift",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.0380952380952381
+    },
+    {
+      "seed": 209,
+      "neural_seed": 31,
+      "scenario": "combined",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.09615384615384616
+    },
+    {
+      "seed": 209,
+      "neural_seed": 31,
+      "scenario": "drift",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.1
+    },
+    {
+      "seed": 209,
+      "neural_seed": 47,
+      "scenario": "combined",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.09615384615384616
+    },
+    {
+      "seed": 209,
+      "neural_seed": 47,
+      "scenario": "drift",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.1
+    },
+    {
+      "seed": 210,
+      "neural_seed": 31,
+      "scenario": "combined",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.052884615384615384
+    },
+    {
+      "seed": 210,
+      "neural_seed": 31,
+      "scenario": "drift",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.05238095238095238
+    },
+    {
+      "seed": 210,
+      "neural_seed": 47,
+      "scenario": "combined",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.052884615384615384
+    },
+    {
+      "seed": 210,
+      "neural_seed": 47,
+      "scenario": "drift",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.05238095238095238
+    },
+    {
+      "seed": 211,
+      "neural_seed": 31,
+      "scenario": "combined",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.04807692307692308
+    },
+    {
+      "seed": 211,
+      "neural_seed": 31,
+      "scenario": "drift",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.047619047619047616
+    },
+    {
+      "seed": 211,
+      "neural_seed": 47,
+      "scenario": "combined",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.04807692307692308
+    },
+    {
+      "seed": 211,
+      "neural_seed": 47,
+      "scenario": "drift",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.047619047619047616
+    },
+    {
+      "seed": 212,
+      "neural_seed": 31,
+      "scenario": "combined",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.038461538461538464
+    },
+    {
+      "seed": 212,
+      "neural_seed": 31,
+      "scenario": "drift",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.11428571428571428
+    },
+    {
+      "seed": 212,
+      "neural_seed": 47,
+      "scenario": "combined",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.038461538461538464
+    },
+    {
+      "seed": 212,
+      "neural_seed": 47,
+      "scenario": "drift",
+      "method": "no_localization",
+      "first_diagnosis": null,
+      "pose_accuracy": 0.0,
+      "memory_damage": 0.11428571428571428
+    }
+  ]
+}

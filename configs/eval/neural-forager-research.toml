@@ -1,0 +1,13 @@
+num_examples = 24
+rollouts_per_example = 1
+max_concurrent = 1
+save_results = true
+state_columns = ["research"]
+
+[[eval]]
+env_id = "neural-forager"
+
+[eval.env_args.config.taskset.research]
+seeds = [201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212]
+neural_seeds = [31, 47]
+horizon = 120

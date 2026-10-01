@@ -1,0 +1,8 @@
+nengo==4.1.0
+numpy==2.2.6
+scipy==1.15.3
+verifiers==0.1.14
+pydantic==2.13.4
+fastapi==0.142.2
+uvicorn==0.52.4
+pytest==8.4.2

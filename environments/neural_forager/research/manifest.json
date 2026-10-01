@@ -1,0 +1,37 @@
+{
+  "frozen_at": "2026-10-01T17:18:26.529341+00:00",
+  "command": "prime eval run configs/eval/neural-forager-research.toml --disable-tui",
+  "versions": {
+    "nengo": "4.1.0",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "verifiers": "0.1.14",
+    "pydantic": "2.13.4"
+  },
+  "files": {
+    "environments/neural_forager/neural_forager/__init__.py": "2bff91d2a087b77cbf2d094c6b86a8db20c811af6d6c903bbc7506dce722aaa9",
+    "environments/neural_forager/neural_forager/agents.py": "2451602bc8a387d84d47530c19620d2fa845816813b8ee8630a8be2722156ce2",
+    "environments/neural_forager/neural_forager/cli.py": "ae1800d0563a295b674ead652353e87219bbdd4ab98056b8cb41543a29a2bf70",
+    "environments/neural_forager/neural_forager/config.py": "386d5ee333bcd4d750c2c603c6a4ef041fbce2d896418b0ecc91c9a800cdc0ea",
+    "environments/neural_forager/neural_forager/experiment.py": "6a0332b9f8faf0a16f462d9d3e69cf0aba67cec507c445cc34007158b52bd6e5",
+    "environments/neural_forager/neural_forager/neural_forager.py": "5d8296a5fc69ba3cd8165aeebab795b8c029dd0b520e2dae52b7e76d70458cc1",
+    "environments/neural_forager/neural_forager/prime.py": "e91a18d5466a791a82e05aec45d552120e544525270ed0c405261dfba49b6c1a",
+    "environments/neural_forager/neural_forager/research/__init__.py": "dccf12cf5fda4280784378353053d9277962f013d5ebead7d10968d3f44fd62a",
+    "environments/neural_forager/neural_forager/research/cli.py": "a30f6a09d3f4435ee82f5d7b6943649e55bd487de8aefa21d95a49b8c2453716",
+    "environments/neural_forager/neural_forager/research/config.py": "2f18dc4e4c12b0435de3b1637767ad8ff19d0e06ea128db4e606aa290ac6955a",
+    "environments/neural_forager/neural_forager/research/controller.py": "31adab1e2b57bb86fdd8c8f9bb272204ac2e67fd66d16afe0b4477cf5bb15cc8",
+    "environments/neural_forager/neural_forager/research/diagnosis.py": "b917f296b09a12db113a9471bd997a9d1ded14a9f046bfdc5923e424166606cb",
+    "environments/neural_forager/neural_forager/research/memory.py": "9628806ca9dfe3c4f4ffe203b44bb816cd0a6961252e96e490918dad41f7693d",
+    "environments/neural_forager/neural_forager/research/runner.py": "f1b7ebf531c0bb844696866e75b364103adeebf7fc74f30c065580ca766036ec",
+    "environments/neural_forager/neural_forager/research/sensors.py": "5f14a7b35d8de73d0a61fbe3f5aecf81832ed995be4009620b39fad61168d8a3",
+    "environments/neural_forager/neural_forager/server.py": "14bdd9825ec757d198f91d113ddcfd17d121ad221e15b6b16b6c2aa0f4b5a890",
+    "environments/neural_forager/neural_forager/world.py": "af929ee1bc2d3318160d6e3632cf83bb25fbcb02128d5c95c2fc2bbbb810f1c2",
+    "environments/neural_forager/research/PROTOCOL.md": "ef638bb44bfa5465c35f1b3945c646d5a46bf959d1280b17f00b9eb89083f77e",
+    "configs/eval/neural-forager-research.toml": "4adf36fafbd7a807a0b6b99c5faa3fee83a219989c835ad855f095cbced456c8"
+  },
+  "artifact_saving_amendment": {
+    "time": "2026-10-01T17:38:29.654589+00:00",
+    "reason": "Prime 0.6.16 config-driven evaluation did not persist results without save_results=true. Initial full run completed; repeat identical seeds and algorithm to capture traces. No algorithm or outcome definitions changed.",
+    "config_sha256": "336f42c554a9b25f4d25c9672adb7450037321bbb53200d56a42b3ac64d26d0c"
+  }
+}

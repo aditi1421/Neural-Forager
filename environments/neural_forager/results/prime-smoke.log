@@ -1,0 +1,206 @@
+Using local environment 'neural-forager'
+Resolved source: neural-forager (local only)
+Eval job_id: neural_forager_openai_gpt_4.1_mini_20261001_214657_c1358c35
+2026-10-01 21:47:00 - verifiers.utils.eval_utils - INFO - Automatically determined concurrency=1
+2026-10-01 21:47:00 - verifiers.utils.eval_utils - INFO - Using num_workers=1 env server worker(s), per-worker concurrency: 1 (total 1)
+2026-10-01 21:47:00 - verifiers.serve.client.env_client.ZMQEnvClient - INFO - Waiting for env server neural-forager (tcp://127.0.0.1:57189) to become healthy (timeout=10m)
+2026-10-01 21:47:01 - verifiers.serve.server.env_server.ZMQEnvServer - INFO - Initializing ZMQEnvServer to serve neural-forager (env_args={'config': {'taskset': {'steps': 60}}}, extra_env_kwargs={'concurrency': 1}, num_workers=1)
+2026-10-01 21:47:01 - verifiers.serve.server.env_server.ZMQEnvServer - INFO - ZMQEnvServer started on tcp://127.0.0.1:57189
+2026-10-01 21:47:01 - verifiers.serve.server.env_router.EnvRouter - INFO - Started worker (id=0, name=neural-forager-0, address=ipc:///tmp/vf-0be73dc3fa01-neural-forager-0, pid=79440)
+2026-10-01 21:47:01 - verifiers.serve.client.env_client.ZMQEnvClient - INFO - Env server neural-forager (tcp://127.0.0.1:57189) became healthy (was startup)
+2026-10-01 21:47:01 - verifiers.serve.client.env_client.ZMQEnvClient - INFO - Env server neural-forager (tcp://127.0.0.1:57189) is healthy
+2026-10-01 21:47:01 - verifiers.envs.environment.Env - INFO - Saving results to environments/neural_forager/outputs/evals/neural-forager--openai--gpt-4.1-mini/45e1c862
+
+Processing 50 groups (50 total rollouts):   0%|          | 0/50 [00:00<?, ?it/s, reward=?]2026-10-01 21:47:03 - verifiers.utils.env_utils - INFO - Loading environment: neural-forager
+2026-10-01 21:47:04 - verifiers.utils.env_utils - INFO - Using provided args: config={'taskset': {'steps': 60}}
+2026-10-01 21:47:04 - verifiers.utils.env_utils - INFO - Successfully loaded environment 'neural-forager'
+2026-10-01 21:47:04 - verifiers.utils.thread_utils - INFO - Scaled default executor and 0 registered executor(s) ()
+2026-10-01 21:47:04 - verifiers.serve.server.env_worker.EnvWorker - INFO - Initialized worker neural-forager-0 on ipc:///tmp/vf-0be73dc3fa01-neural-forager-0
+2026-10-01 21:47:04 - verifiers.serve.server.env_worker.EnvWorker - INFO - Starting worker neural-forager-0
+
+Processing 50 groups (50 total rollouts):   2%|▏         | 1/50 [00:04<03:23,  4.14s/it, reward=?]
+Processing 50 groups (50 total rollouts):   2%|▏         | 1/50 [00:04<03:23,  4.14s/it, reward=0]
+Processing 50 groups (50 total rollouts):   4%|▍         | 2/50 [00:05<02:07,  2.66s/it, reward=0]
+Processing 50 groups (50 total rollouts):   4%|▍         | 2/50 [00:05<02:07,  2.66s/it, reward=0.00833]
+Processing 50 groups (50 total rollouts):   6%|▌         | 3/50 [00:07<01:43,  2.20s/it, reward=0.00833]
+Processing 50 groups (50 total rollouts):   6%|▌         | 3/50 [00:07<01:43,  2.20s/it, reward=0.0111]
+Processing 50 groups (50 total rollouts):   8%|▊         | 4/50 [00:09<01:31,  1.99s/it, reward=0.0111]
+Processing 50 groups (50 total rollouts):   8%|▊         | 4/50 [00:09<01:31,  1.99s/it, reward=0.00833]2026-10-01 21:47:11 - verifiers.serve.server.env_router.EnvRouter - INFO - Active tasks: 0 (W0: ?)
+  Server | Lag: min=0ms mean=1ms median=1ms p90=1ms p99=1ms max=1ms (n=99)
+  W0     | no stats yet
+
+Processing 50 groups (50 total rollouts):  10%|█         | 5/50 [00:10<01:25,  1.89s/it, reward=0.00833]
+Processing 50 groups (50 total rollouts):  10%|█         | 5/50 [00:10<01:25,  1.89s/it, reward=0.00667]
+Processing 50 groups (50 total rollouts):  12%|█▏        | 6/50 [00:12<01:20,  1.83s/it, reward=0.00667]
+Processing 50 groups (50 total rollouts):  12%|█▏        | 6/50 [00:12<01:20,  1.83s/it, reward=0.0139]
+Processing 50 groups (50 total rollouts):  14%|█▍        | 7/50 [00:14<01:19,  1.86s/it, reward=0.0139]
+Processing 50 groups (50 total rollouts):  14%|█▍        | 7/50 [00:14<01:19,  1.86s/it, reward=0.0119]
+Processing 50 groups (50 total rollouts):  16%|█▌        | 8/50 [00:16<01:16,  1.82s/it, reward=0.0119]
+Processing 50 groups (50 total rollouts):  16%|█▌        | 8/50 [00:16<01:16,  1.82s/it, reward=0.0104]
+Processing 50 groups (50 total rollouts):  18%|█▊        | 9/50 [00:17<01:13,  1.79s/it, reward=0.0104]
+Processing 50 groups (50 total rollouts):  18%|█▊        | 9/50 [00:17<01:13,  1.79s/it, reward=0.00926]
+Processing 50 groups (50 total rollouts):  20%|██        | 10/50 [00:19<01:11,  1.79s/it, reward=0.00926]
+Processing 50 groups (50 total rollouts):  20%|██        | 10/50 [00:19<01:11,  1.79s/it, reward=0.0117] 2026-10-01 21:47:22 - verifiers.serve.server.env_router.EnvRouter - INFO - Active tasks: 1 (W0: 1)
+  Server | Lag: min=0ms mean=1ms median=1ms p90=1ms p99=1ms max=1ms (n=199)
+  W0     | Lag: min=0ms mean=1ms median=1ms p90=1ms p99=1ms max=1ms (n=99)
+
+Processing 50 groups (50 total rollouts):  22%|██▏       | 11/50 [00:21<01:10,  1.82s/it, reward=0.0117]
+Processing 50 groups (50 total rollouts):  22%|██▏       | 11/50 [00:21<01:10,  1.82s/it, reward=0.0121]
+Processing 50 groups (50 total rollouts):  24%|██▍       | 12/50 [00:23<01:09,  1.83s/it, reward=0.0121]
+Processing 50 groups (50 total rollouts):  24%|██▍       | 12/50 [00:23<01:09,  1.83s/it, reward=0.0111]
+Processing 50 groups (50 total rollouts):  26%|██▌       | 13/50 [00:25<01:07,  1.82s/it, reward=0.0111]
+Processing 50 groups (50 total rollouts):  26%|██▌       | 13/50 [00:25<01:07,  1.82s/it, reward=0.0103]
+Processing 50 groups (50 total rollouts):  28%|██▊       | 14/50 [00:26<01:04,  1.80s/it, reward=0.0103]
+Processing 50 groups (50 total rollouts):  28%|██▊       | 14/50 [00:26<01:04,  1.80s/it, reward=0.00952]
+Processing 50 groups (50 total rollouts):  30%|███       | 15/50 [00:28<01:03,  1.81s/it, reward=0.00952]
+Processing 50 groups (50 total rollouts):  30%|███       | 15/50 [00:28<01:03,  1.81s/it, reward=0.00889]2026-10-01 21:47:32 - verifiers.serve.server.env_router.EnvRouter - INFO - Active tasks: 1 (W0: 1)
+  Server | Lag: min=0ms mean=1ms median=1ms p90=1ms p99=1ms max=1ms (n=299)
+  W0     | Lag: min=0ms mean=1ms median=1ms p90=1ms p99=1ms max=2ms (n=197)
+
+Processing 50 groups (50 total rollouts):  32%|███▏      | 16/50 [00:30<00:59,  1.75s/it, reward=0.00889]
+Processing 50 groups (50 total rollouts):  32%|███▏      | 16/50 [00:30<00:59,  1.75s/it, reward=0.00833]
+Processing 50 groups (50 total rollouts):  34%|███▍      | 17/50 [00:32<00:56,  1.72s/it, reward=0.00833]
+Processing 50 groups (50 total rollouts):  34%|███▍      | 17/50 [00:32<00:56,  1.72s/it, reward=0.00882]
+Processing 50 groups (50 total rollouts):  36%|███▌      | 18/50 [00:33<00:54,  1.70s/it, reward=0.00882]
+Processing 50 groups (50 total rollouts):  36%|███▌      | 18/50 [00:33<00:54,  1.70s/it, reward=0.00833]
+Processing 50 groups (50 total rollouts):  38%|███▊      | 19/50 [00:35<00:53,  1.74s/it, reward=0.00833]
+Processing 50 groups (50 total rollouts):  38%|███▊      | 19/50 [00:35<00:53,  1.74s/it, reward=0.00789]
+Processing 50 groups (50 total rollouts):  40%|████      | 20/50 [00:37<00:51,  1.71s/it, reward=0.00789]
+Processing 50 groups (50 total rollouts):  40%|████      | 20/50 [00:37<00:51,  1.71s/it, reward=0.00833]
+Processing 50 groups (50 total rollouts):  42%|████▏     | 21/50 [00:38<00:48,  1.66s/it, reward=0.00833]
+Processing 50 groups (50 total rollouts):  42%|████▏     | 21/50 [00:38<00:48,  1.66s/it, reward=0.00873]2026-10-01 21:47:42 - verifiers.serve.server.env_router.EnvRouter - INFO - Active tasks: 1 (W0: 1)
+  Server | Lag: min=0ms mean=1ms median=1ms p90=1ms p99=1ms max=1ms (n=398)
+  W0     | Lag: min=0ms mean=1ms median=1ms p90=1ms p99=1ms max=2ms (n=296)
+
+Processing 50 groups (50 total rollouts):  44%|████▍     | 22/50 [00:40<00:47,  1.70s/it, reward=0.00873]
+Processing 50 groups (50 total rollouts):  44%|████▍     | 22/50 [00:40<00:47,  1.70s/it, reward=0.00909]
+Processing 50 groups (50 total rollouts):  46%|████▌     | 23/50 [00:42<00:44,  1.66s/it, reward=0.00909]
+Processing 50 groups (50 total rollouts):  46%|████▌     | 23/50 [00:42<00:44,  1.66s/it, reward=0.00942]
+Processing 50 groups (50 total rollouts):  48%|████▊     | 24/50 [00:43<00:42,  1.65s/it, reward=0.00942]
+Processing 50 groups (50 total rollouts):  48%|████▊     | 24/50 [00:43<00:42,  1.65s/it, reward=0.00903]
+Processing 50 groups (50 total rollouts):  50%|█████     | 25/50 [00:45<00:41,  1.64s/it, reward=0.00903]
+Processing 50 groups (50 total rollouts):  50%|█████     | 25/50 [00:45<00:41,  1.64s/it, reward=0.00933]
+Processing 50 groups (50 total rollouts):  52%|█████▏    | 26/50 [00:47<00:40,  1.69s/it, reward=0.00933]
+Processing 50 groups (50 total rollouts):  52%|█████▏    | 26/50 [00:47<00:40,  1.69s/it, reward=0.00897]
+Processing 50 groups (50 total rollouts):  54%|█████▍    | 27/50 [00:48<00:39,  1.70s/it, reward=0.00897]
+Processing 50 groups (50 total rollouts):  54%|█████▍    | 27/50 [00:48<00:39,  1.70s/it, reward=0.00926]2026-10-01 21:47:52 - verifiers.serve.server.env_router.EnvRouter - INFO - Active tasks: 1 (W0: 1)
+  Server | Lag: min=0ms mean=1ms median=1ms p90=1ms p99=1ms max=1ms (n=498)
+  W0     | Lag: min=0ms mean=1ms median=1ms p90=1ms p99=1ms max=2ms (n=395)
+
+Processing 50 groups (50 total rollouts):  56%|█████▌    | 28/50 [00:50<00:36,  1.67s/it, reward=0.00926]
+Processing 50 groups (50 total rollouts):  56%|█████▌    | 28/50 [00:50<00:36,  1.67s/it, reward=0.00893]
+Processing 50 groups (50 total rollouts):  58%|█████▊    | 29/50 [00:52<00:34,  1.65s/it, reward=0.00893]
+Processing 50 groups (50 total rollouts):  58%|█████▊    | 29/50 [00:52<00:34,  1.65s/it, reward=0.00862]
+Processing 50 groups (50 total rollouts):  60%|██████    | 30/50 [00:53<00:32,  1.62s/it, reward=0.00862]
+Processing 50 groups (50 total rollouts):  60%|██████    | 30/50 [00:53<00:32,  1.62s/it, reward=0.00944]
+Processing 50 groups (50 total rollouts):  62%|██████▏   | 31/50 [00:55<00:31,  1.63s/it, reward=0.00944]
+Processing 50 groups (50 total rollouts):  62%|██████▏   | 31/50 [00:55<00:31,  1.63s/it, reward=0.00914]
+Processing 50 groups (50 total rollouts):  64%|██████▍   | 32/50 [00:57<00:30,  1.67s/it, reward=0.00914]
+Processing 50 groups (50 total rollouts):  64%|██████▍   | 32/50 [00:57<00:30,  1.67s/it, reward=0.00885]
+Processing 50 groups (50 total rollouts):  66%|██████▌   | 33/50 [00:59<00:30,  1.78s/it, reward=0.00885]
+Processing 50 groups (50 total rollouts):  66%|██████▌   | 33/50 [00:59<00:30,  1.78s/it, reward=0.00859]2026-10-01 21:48:02 - verifiers.serve.server.env_router.EnvRouter - INFO - Active tasks: 1 (W0: 1)
+  Server | Lag: min=0ms mean=1ms median=1ms p90=1ms p99=1ms max=1ms (n=597)
+  W0     | Lag: min=0ms mean=1ms median=1ms p90=1ms p99=1ms max=2ms (n=494)
+
+Processing 50 groups (50 total rollouts):  68%|██████▊   | 34/50 [01:00<00:28,  1.75s/it, reward=0.00859]
+Processing 50 groups (50 total rollouts):  68%|██████▊   | 34/50 [01:00<00:28,  1.75s/it, reward=0.00833]
+Processing 50 groups (50 total rollouts):  70%|███████   | 35/50 [01:03<00:30,  2.07s/it, reward=0.00833]
+Processing 50 groups (50 total rollouts):  70%|███████   | 35/50 [01:03<00:30,  2.07s/it, reward=0.00857]
+Processing 50 groups (50 total rollouts):  72%|███████▏  | 36/50 [01:05<00:27,  1.95s/it, reward=0.00857]
+Processing 50 groups (50 total rollouts):  72%|███████▏  | 36/50 [01:05<00:27,  1.95s/it, reward=0.0088]
+Processing 50 groups (50 total rollouts):  74%|███████▍  | 37/50 [01:07<00:24,  1.92s/it, reward=0.0088]
+Processing 50 groups (50 total rollouts):  74%|███████▍  | 37/50 [01:07<00:24,  1.92s/it, reward=0.00856]
+Processing 50 groups (50 total rollouts):  76%|███████▌  | 38/50 [01:08<00:22,  1.88s/it, reward=0.00856]
+Processing 50 groups (50 total rollouts):  76%|███████▌  | 38/50 [01:08<00:22,  1.88s/it, reward=0.00833]2026-10-01 21:48:12 - verifiers.serve.server.env_router.EnvRouter - INFO - Active tasks: 1 (W0: 1)
+  Server | Lag: min=0ms mean=1ms median=1ms p90=1ms p99=1ms max=1ms (n=696)
+  W0     | Lag: min=0ms mean=1ms median=1ms p90=1ms p99=1ms max=19ms (n=593)
+
+Processing 50 groups (50 total rollouts):  78%|███████▊  | 39/50 [01:10<00:20,  1.88s/it, reward=0.00833]
+Processing 50 groups (50 total rollouts):  78%|███████▊  | 39/50 [01:10<00:20,  1.88s/it, reward=0.00812]
+Processing 50 groups (50 total rollouts):  80%|████████  | 40/50 [01:12<00:17,  1.74s/it, reward=0.00812]
+Processing 50 groups (50 total rollouts):  80%|████████  | 40/50 [01:12<00:17,  1.74s/it, reward=0.01]
+Processing 50 groups (50 total rollouts):  82%|████████▏ | 41/50 [01:13<00:15,  1.73s/it, reward=0.01]
+Processing 50 groups (50 total rollouts):  82%|████████▏ | 41/50 [01:13<00:15,  1.73s/it, reward=0.011]
+Processing 50 groups (50 total rollouts):  84%|████████▍ | 42/50 [01:15<00:14,  1.75s/it, reward=0.011]
+Processing 50 groups (50 total rollouts):  84%|████████▍ | 42/50 [01:15<00:14,  1.75s/it, reward=0.0107]
+Processing 50 groups (50 total rollouts):  86%|████████▌ | 43/50 [01:17<00:12,  1.74s/it, reward=0.0107]
+Processing 50 groups (50 total rollouts):  86%|████████▌ | 43/50 [01:17<00:12,  1.74s/it, reward=0.0109]
+Processing 50 groups (50 total rollouts):  88%|████████▊ | 44/50 [01:19<00:10,  1.73s/it, reward=0.0109]
+Processing 50 groups (50 total rollouts):  88%|████████▊ | 44/50 [01:19<00:10,  1.73s/it, reward=0.0106]2026-10-01 21:48:22 - verifiers.serve.server.env_router.EnvRouter - INFO - Active tasks: 1 (W0: 1)
+  Server | Lag: min=0ms mean=1ms median=1ms p90=1ms p99=1ms max=1ms (n=795)
+  W0     | Lag: min=0ms mean=1ms median=1ms p90=1ms p99=2ms max=22ms (n=692)
+
+Processing 50 groups (50 total rollouts):  90%|█████████ | 45/50 [01:20<00:08,  1.74s/it, reward=0.0106]
+Processing 50 groups (50 total rollouts):  90%|█████████ | 45/50 [01:20<00:08,  1.74s/it, reward=0.0104]
+Processing 50 groups (50 total rollouts):  92%|█████████▏| 46/50 [01:22<00:06,  1.73s/it, reward=0.0104]
+Processing 50 groups (50 total rollouts):  92%|█████████▏| 46/50 [01:22<00:06,  1.73s/it, reward=0.0105]
+Processing 50 groups (50 total rollouts):  94%|█████████▍| 47/50 [01:24<00:05,  1.73s/it, reward=0.0105]
+Processing 50 groups (50 total rollouts):  94%|█████████▍| 47/50 [01:24<00:05,  1.73s/it, reward=0.0103]
+Processing 50 groups (50 total rollouts):  96%|█████████▌| 48/50 [01:26<00:03,  1.75s/it, reward=0.0103]
+Processing 50 groups (50 total rollouts):  96%|█████████▌| 48/50 [01:26<00:03,  1.75s/it, reward=0.0101]
+Processing 50 groups (50 total rollouts):  98%|█████████▊| 49/50 [01:27<00:01,  1.77s/it, reward=0.0101]
+Processing 50 groups (50 total rollouts):  98%|█████████▊| 49/50 [01:27<00:01,  1.77s/it, reward=0.00986]
+Processing 50 groups (50 total rollouts): 100%|██████████| 50/50 [01:29<00:00,  1.73s/it, reward=0.00986]
+Processing 50 groups (50 total rollouts): 100%|██████████| 50/50 [01:29<00:00,  1.73s/it, reward=0.00967]2026-10-01 21:48:31 - verifiers.envs.environment.Env - INFO - Saved final results to environments/neural_forager/outputs/evals/neural-forager--openai--gpt-4.1-mini/45e1c862
+
+Processing 50 groups (50 total rollouts): 100%|██████████| 50/50 [01:29<00:00,  1.79s/it, reward=0.00967]
+2026-10-01 21:48:31 - verifiers.utils.process_utils - INFO - Death pipe closed — parent is gone, sending SIGTERM to self
+2026-10-01 21:48:31 - verifiers.utils.process_utils - INFO - Death pipe closed — parent is gone, sending SIGTERM to self
+2026-10-01 21:48:31 - verifiers.serve.server.env_worker.EnvWorker - INFO - Shut down worker neural-forager-0
+2026-10-01 21:48:32 - verifiers.serve.server.env_router.EnvRouter - INFO - Router shut down
+2026-10-01 21:48:32 - verifiers.serve.server.env_server.ZMQEnvServer - INFO - ZMQEnvServer shut down
+2026-10-01 21:48:32 - verifiers.utils.eval_utils - INFO - Evaluation completed in 93.85 seconds
+--- Evaluation ---
+Environment: neural-forager
+Model: openai/gpt-4.1-mini
+Provider: https://api.pinference.ai/api/v1
+Examples: 50
+Rollouts per example: 1
+--- Example ---
+╭─────────────────────────────────── Step 0 ───────────────────────────────────╮
+│ ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┓ │
+│ ┃ Prompt                         ┃ Completion                     ┃ Reward ┃ │
+│ ┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━┩ │
+│ │ user: Forage in held-out maze  │ assistant: {"agent": "neural", │   0.00 │ │
+│ │ 101.                           │ "seed": 101, "steps": 60,      │        │ │
+│ │                                │ "food": 0, "trials": 0,        │        │ │
+│ │                                │ "success_rate": 0.0,           │        │ │
+│ │                                │ "mean_efficiency": null,       │        │ │
+│ │                                │ "coverage":                    │        │ │
+│ │                                │ 0.5428571428571428,            │        │ │
+│ │                                │ "phase_food": {"learn": 0,     │        │ │
+│ │                                │ "reroute": 0, "relocate": 0},  │        │ │
+│ │                                │ "phase_steps": {"learn": 20,   │        │ │
+│ │                                │ "reroute": 20, "relocate":     │        │ │
+│ │                                │ 20}, "elapsed_seconds": 1.798, │        │ │
+│ │                                │ "weight_change":               │        │ │
+│ │                                │ 0.00019083912466297,           │        │ │
+│ │                                │ "interventions": [{"step": 20, │        │ │
+│ │                                │ "kind": "route", "applied":    │        │ │
+│ │                                │ true, "edge": [[3, 5], [3,     │        │ │
+│ │                                │ 6]], "message": "Passage       │        │ │
+│ │                                │ closed"}, {"step": 40, "kind": │        │ │
+│ │                                │ "food", "applied": true,       │        │ │
+│ │                                │ "message": "Food relocated"}]} │        │ │
+│ └────────────────────────────────┴────────────────────────────────┴────────┘ │
+╰──────────────────────────────────────────────────────────────────────────────╯
+--- All ---
+Rewards:
+reward: avg - 0.010, std - 0.016
+r1: [0.0, 0.017, 0.017, 0.0, 0.0, 0.05, 0.0, 0.0, 0.0, 0.033, 0.017, 0.0, 0.0, 0.0, 0.0, 0.0, 0.017, 0.0, 0.0, 0.017, 0.017, 0.017, 0.017, 0.0, 0.017, 0.0, 0.017, 0.0, 0.0, 0.033, 0.0, 0.0, 0.0, 0.0, 0.017, 0.017, 0.0, 0.0, 0.0, 0.083, 0.05, 0.0, 0.017, 0.0, 0.0, 0.017, 0.0, 0.0, 0.0, 0.0]
+coverage: avg - 0.484, std - 0.133
+r1: [0.543, 0.343, 0.4, 0.371, 0.371, 0.371, 0.543, 0.343, 0.4, 0.543, 0.714, 0.4, 0.457, 0.6, 0.543, 0.286, 0.571, 0.314, 0.657, 0.514, 0.457, 0.543, 0.429, 0.429, 0.457, 0.829, 0.657, 0.286, 0.514, 0.571, 0.429, 0.457, 0.371, 0.371, 0.743, 0.457, 0.857, 0.457, 0.629, 0.2, 0.371, 0.514, 0.629, 0.486, 0.486, 0.543, 0.429, 0.486, 0.457, 0.371]
+food_rate: avg - 0.010, std - 0.016
+r1: [0.0, 0.017, 0.017, 0.0, 0.0, 0.05, 0.0, 0.0, 0.0, 0.033, 0.017, 0.0, 0.0, 0.0, 0.0, 0.0, 0.017, 0.0, 0.0, 0.017, 0.017, 0.017, 0.017, 0.0, 0.017, 0.0, 0.017, 0.0, 0.0, 0.033, 0.0, 0.0, 0.0, 0.0, 0.017, 0.017, 0.0, 0.0, 0.0, 0.083, 0.05, 0.0, 0.017, 0.0, 0.0, 0.017, 0.0, 0.0, 0.0, 0.0]
+Info:
+is_truncated: avg - 0.000, std - 0.000
+stop_conditions: program_completed: 1.000
+Timing:
+
+Performance:
+event_loop_lag: mean=3ms, p99=1ms, max=2s (n=906)
+Local environment is not linked to an upstream.
+Publish the current local version with: prime env push --path
+environments/neural_forager
+Evaluation completed. Automatic upload is skipped until the local environment is
+published.
