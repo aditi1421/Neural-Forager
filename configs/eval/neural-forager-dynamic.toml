@@ -1,0 +1,12 @@
+num_examples = 16
+rollouts_per_example = 1
+max_concurrent = 1
+save_results = true
+state_columns = ["dynamic"]
+
+[[eval]]
+env_id = "neural-forager"
+
+[eval.env_args.config.taskset.dynamic]
+seeds = [401, 402, 403, 404, 405, 406, 407, 408]
+neural_seeds = [31, 47]

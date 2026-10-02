@@ -11,6 +11,7 @@ from .research.config import ResearchConfig, ResearchSuiteConfig
 from .research.runner import ResearchRunner
 from .audit.config import AuditConfig, AuditSuiteConfig
 from .audit.runner import AuditRunner
+from .audit.dynamic import DynamicConfig, DynamicSuiteConfig, DynamicRunner
 
 
 class ForagerTasksetConfig(vf.TasksetConfig):
@@ -18,6 +19,7 @@ class ForagerTasksetConfig(vf.TasksetConfig):
     agent: AgentKind = "neural"
     research: ResearchSuiteConfig | None = None
     audit: AuditSuiteConfig | None = None
+    dynamic: DynamicSuiteConfig | None = None
 
 
 class ForagerEnvConfig(vf.EnvConfig):
@@ -29,6 +31,12 @@ class ForagerTaskset(vf.Taskset):
     config_type = ForagerTasksetConfig
 
     def __init__(self, config):
+        if config.dynamic is not None:
+            source = [{"prompt": [{"role": "user", "content": f"Test current smoothing on maze {seed}."}],
+                       "dynamic": DynamicConfig(seed=seed, neural_seed=n).model_dump()}
+                      for seed in config.dynamic.seeds for n in config.dynamic.neural_seeds]
+            super().__init__(source=source, config=config, rewards=[self.dynamic_accuracy])
+            return
         if config.audit is not None:
             source = [{"prompt": [{"role": "user", "content": f"Audit spikes on maze {seed}, neural seed {neural_seed}."}],
                        "audit": AuditConfig(seed=seed, neural_seed=neural_seed, horizon=config.audit.horizon,
@@ -47,6 +55,11 @@ class ForagerTaskset(vf.Taskset):
         source = [{"prompt": [{"role": "user", "content": f"Forage in held-out maze {seed}."}],
                    "seed": seed, "steps": config.steps, "agent": config.agent} for seed in range(101, 151)]
         super().__init__(source=source, config=config, rewards=[self.food_rate], metrics=[self.coverage])
+
+    @staticmethod
+    def dynamic_accuracy(task, state):
+        rows = state["dynamic"]["memory"]
+        return sum(r["accuracy"] for r in rows) / len(rows)
 
     @staticmethod
     def spiking_read_accuracy(task, state):
@@ -81,6 +94,8 @@ class ForagerTaskset(vf.Taskset):
 class ForagerProgram:
     @staticmethod
     def run(task):
+        if "dynamic" in task:
+            return DynamicRunner(DynamicConfig.model_validate(task["dynamic"])).run()
         if "audit" in task:
             return AuditRunner(AuditConfig.model_validate(task["audit"])).run()
         if "research" in task:
@@ -92,6 +107,11 @@ class ForagerProgram:
     @staticmethod
     async def execute(task, state):
         result = await asyncio.to_thread(ForagerProgram.run, task)
+        if "dynamic" in task:
+            state["dynamic"] = result
+            state["completion"] = [{"role": "assistant", "content": json.dumps({
+                "config": result["config"], "memory_assays": len(result["memory"])})}]
+            return state
         if "audit" in task:
             state["audit"] = result
             state["completion"] = [{"role": "assistant", "content": json.dumps({

@@ -4,6 +4,12 @@ This follow-up audits the existing project. It separates three claims:
 task performance, resource efficiency, and algorithmic novelty. A positive result
 on one does not automatically establish either of the others.
 
+**Verdict: no useful spike-specific advantage or defensible algorithmic novelty
+is established for the current selective-memory design.** A noise-related analog
+benefit over instantaneous rate units was observed, but a separately tested,
+non-spiking smoothing control did better on that metric. This is a scoped
+empirical finding, not a claim that spikes can never be useful.
+
 ## What changed in the comparison
 
 The first study compared neural and conventional memories but did not isolate
@@ -76,12 +82,48 @@ versus **0.00244** for instantaneous rate units, about 76% lower. The paired MSE
 difference was −0.00185 [−0.00190, −0.00180]. These are secondary unadjusted
 intervals. This improvement did not change categorical accuracy or navigation.
 It cannot yet be attributed specifically to discrete spikes, because the rate
-control also lacks LIF membrane integration. A separately frozen dynamic-rate
-follow-up tests that explanation; it must not be confused with the original
-primary endpoint or a post-hoc change to this evaluation.
+control also lacks LIF membrane integration. The separately frozen dynamic-rate
+follow-up below tests that explanation; it is not a change to the original
+primary endpoint.
 
 See [all tables](TABLES.md) and [machine-readable results](summary.json), including
 analog error, channel accuracy, reward detection, and both transfer directions.
+
+## Follow-up: the noise benefit is not exclusive to spikes
+
+We evaluated **256 additional full-map assays** on eight fresh mazes (401–408),
+crossed with two neural seeds, both weight sources, four receivers, and clean/noisy
+conditions. There were 16 completed Prime tasks and zero errors. No navigation
+experiments were added or counted again. The two new receivers use ordinary
+exponential smoothing before a non-spiking rate nonlinearity, with fixed 8 ms
+and 20 ms time constants. Both retained the same 65 ms read deadline, weight
+arrays, and output filter; neither got extra training or a hyperparameter search.
+
+| Receiver | Clean MSE | Noisy-current MSE | Categorical accuracy |
+|---|---:|---:|---:|
+| Spiking LIF | 0.000032 | 0.000559 | 100% |
+| Instantaneous rate | 0.000015 | 0.002353 | 100% |
+| Rate + 8 ms current filter | 0.000089 | **0.000321** | 100% |
+| Rate + 20 ms current filter | 0.006384 | 0.006693 | 100% |
+
+The 8 ms non-spiking filter had approximately **43% lower noisy-current MSE**
+than the spiking receiver. The paired spiking-minus-filter difference was
+**0.000238 [0.000192, 0.000286]**, Holm-adjusted one-sided p = **0.00781** over
+the two filter comparisons. This met the follow-up's declared superiority
+criterion. The slower 20 ms filter was worse, and the 8 ms filter also had
+higher clean MSE than either unfiltered model. Smoothing has tradeoffs; we do
+not claim that every rate model dominates LIF in every regime.
+
+This is a constructive counterexample to attributing the observed noisy-current
+benefit exclusively to spike events. A non-spiking dynamic system can obtain
+and exceed it on this task with the same deadline and weights. It does not prove
+that linear smoothing exactly reproduces every aspect of membrane dynamics.
+
+The follow-up was motivated by the main result, then frozen and tested on fresh
+seeds. That distinction matters: it is a targeted mechanism test, not a
+retroactively selected primary success. Read its [protocol](DYNAMIC_PROTOCOL.md),
+[tables](DYNAMIC_TABLES.md), [summary](dynamic-summary.json), and
+[source manifest](dynamic-manifest.json).
 
 ## Resource claim
 
@@ -128,6 +170,10 @@ does better under a perturbation, that comparison alone cannot separate a benefi
 of membrane integration from a benefit of spikes. A dynamic non-spiking control
 would be required for that stronger attribution.
 
+The dynamic follow-up supplies two such simple non-spiking controls for the
+specific noisy-current readout question. It does not exhaust all dynamic models
+or generalize the finding to recurrent networks, event sensing, or hardware.
+
 Mean categorical accuracy can obscure loss of the one rewarded location or
 particular landmark/geometry components. Per-channel accuracy, reward-site
 detection, analog MSE, full decoded arrays, and navigation traces are retained.
@@ -149,6 +195,11 @@ prime eval run configs/eval/neural-forager-audit-smoke.toml --disable-tui
 prime eval run configs/eval/neural-forager-audit.toml --disable-tui
 .venv/bin/python environments/neural_forager/audit/analyze.py \
   PATH_PRINTED_BY_PRIME/results.jsonl --output /tmp/forager-audit
+
+# Separately frozen mechanism follow-up:
+prime eval run configs/eval/neural-forager-dynamic.toml --disable-tui
+.venv/bin/python environments/neural_forager/audit/analyze_dynamic.py \
+  environments/neural_forager/audit/dynamic-heldout.jsonl.gz --output /tmp/forager-dynamic
 ```
 
 Reproduce the analysis alone using the committed
@@ -161,3 +212,12 @@ The harness makes no LLM calls. Prime's default model label is unused. Configs
 explicitly save full state, with no upload opt-out; this installed Prime version
 does not automatically upload config-driven evaluations. All evidence is kept
 in this repository. The first study remains available at commit `d5845a0`.
+The main audit's frozen source is at `f7e1e56`; the subsequent Prime adapter adds
+the dynamic experiment without altering that earlier experiment's algorithm.
+
+Validation: **53 tests passed**. Tests cover exact weight transfer, identical
+perturbations, cache refresh, read-window isolation, non-spiking filter behavior,
+and statistical grouping/sign-flip/Holm calculations. Source hashes were checked
+against each study's own version. Both analyses reproduce exactly from the
+committed compressed Prime records. No held-out source or parameter tuning was
+performed. Total new evidence: **1,280 memory assays and 384 navigation episodes**.

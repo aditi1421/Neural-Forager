@@ -79,6 +79,13 @@ result still needs care: it may reflect membrane filtering rather than the
 discrete spikes themselves. A dynamic non-spiking control would be required
 to isolate that distinction. [Nengo API](https://www.nengo.ai/nengo/frontend-api.html#nengo.LIFRate)
 
+The completed [dynamic-rate follow-up](REPORT.md#follow-up-the-noise-benefit-is-not-exclusive-to-spikes)
+provides that additional control for the observed analog-noise effect. A fixed
+8 ms non-spiking current smoother lowered noisy-current MSE further than LIF
+on fresh mazes, while a 20 ms smoother performed worse. This demonstrates that
+the measured noise benefit is not exclusive to spike events in this assay;
+it is not a proof that all spiking dynamics reduce to linear filtering.
+
 ## Search and decision record
 
 Queries included combinations of spiking/rate parameter matching, robustness,

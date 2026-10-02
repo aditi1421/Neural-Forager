@@ -70,6 +70,12 @@ loss, short reads, and reduced neuron counts on 16 fresh mazes: 1,024 memory
 assays and 384 navigation episodes. See the [audit report](environments/neural_forager/audit/REPORT.md)
 for the measured outcome and claim boundaries.
 
+**Current finding:** no navigation advantage from spikes. A noise-related
+readout improvement over instantaneous rate units was surpassed by a simple
+non-spiking filter in 256 additional tests on fresh mazes. No defensible new
+algorithmic principle is established. The report includes the unfavorable
+results and the filter's own tradeoffs.
+
 ```bash
 prime eval run configs/eval/neural-forager-audit-smoke.toml --disable-tui
 prime eval run configs/eval/neural-forager-audit.toml --disable-tui
@@ -86,9 +92,10 @@ uv pip install --python .venv/bin/python -e 'environments/neural_forager[dev]'
 .venv/bin/python -m pytest environments/neural_forager/tests -q
 ```
 
-51 tests cover the world, real plastic weights, observations, localization,
+53 tests cover the world, real plastic weights, observations, localization,
 memory gates, reward edits, dashboard sessions, matched rate controls, weight
-transfer, shared perturbations, cache invalidation, and paired statistical analysis. See the
+transfer, shared perturbations, cache invalidation, smoothing controls, and paired
+statistical analysis. See the
 [implementation guide](environments/neural_forager/README.md) for architecture
 and the original foraging pilot.
 
