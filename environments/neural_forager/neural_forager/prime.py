@@ -9,12 +9,15 @@ from .config import AgentKind, ExperimentConfig
 from .experiment import Experiment
 from .research.config import ResearchConfig, ResearchSuiteConfig
 from .research.runner import ResearchRunner
+from .audit.config import AuditConfig, AuditSuiteConfig
+from .audit.runner import AuditRunner
 
 
 class ForagerTasksetConfig(vf.TasksetConfig):
     steps: int = Field(default=600, ge=30, le=20000)
     agent: AgentKind = "neural"
     research: ResearchSuiteConfig | None = None
+    audit: AuditSuiteConfig | None = None
 
 
 class ForagerEnvConfig(vf.EnvConfig):
@@ -26,6 +29,13 @@ class ForagerTaskset(vf.Taskset):
     config_type = ForagerTasksetConfig
 
     def __init__(self, config):
+        if config.audit is not None:
+            source = [{"prompt": [{"role": "user", "content": f"Audit spikes on maze {seed}, neural seed {neural_seed}."}],
+                       "audit": AuditConfig(seed=seed, neural_seed=neural_seed, horizon=config.audit.horizon,
+                                            budgets=config.audit.budgets).model_dump()}
+                      for seed in config.audit.seeds for neural_seed in config.audit.neural_seeds]
+            super().__init__(source=source, config=config, rewards=[self.spiking_read_accuracy])
+            return
         if config.research is not None:
             source = [{"prompt": [{"role": "user", "content": f"Evaluate selective memory on maze {seed}, neural seed {neural_seed}."}],
                        "research": ResearchConfig(seed=seed, neural_seed=neural_seed,
@@ -37,6 +47,12 @@ class ForagerTaskset(vf.Taskset):
         source = [{"prompt": [{"role": "user", "content": f"Forage in held-out maze {seed}."}],
                    "seed": seed, "steps": config.steps, "agent": config.agent} for seed in range(101, 151)]
         super().__init__(source=source, config=config, rewards=[self.food_rate], metrics=[self.coverage])
+
+    @staticmethod
+    def spiking_read_accuracy(task, state):
+        rows = [r for r in state["audit"]["memory"]
+                if r["backend"] == "spiking" and r["trained_by"] == "spiking"]
+        return sum(r["accuracy"] for r in rows) / len(rows)
 
     @staticmethod
     def food_rate(task, state):
@@ -65,6 +81,8 @@ class ForagerTaskset(vf.Taskset):
 class ForagerProgram:
     @staticmethod
     def run(task):
+        if "audit" in task:
+            return AuditRunner(AuditConfig.model_validate(task["audit"])).run()
         if "research" in task:
             return ResearchRunner(ResearchConfig.model_validate(task["research"])).run()
         config = ExperimentConfig(seed=task["seed"], steps=task["steps"], agent=task["agent"])
@@ -74,6 +92,12 @@ class ForagerProgram:
     @staticmethod
     async def execute(task, state):
         result = await asyncio.to_thread(ForagerProgram.run, task)
+        if "audit" in task:
+            state["audit"] = result
+            state["completion"] = [{"role": "assistant", "content": json.dumps({
+                "config": result["config"], "memory_assays": len(result["memory"]),
+                "navigation_episodes": len(result["navigation"]), "calibration": result["calibration"]})}]
+            return state
         if "research" in task:
             state["research"] = result
             summary = [{key: row[key] for key in ["seed", "neural_seed", "scenario", "method", "success",

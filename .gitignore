@@ -10,3 +10,4 @@ outputs/
 dist/
 build/
 *.pending.json
+environments/neural_forager/audit/*.log

@@ -1,0 +1,37 @@
+{
+  "frozen_at": "2026-10-02T05:05:05.638271+00:00",
+  "parent_commit": "d5845a0",
+  "command": "prime eval run configs/eval/neural-forager-audit.toml --disable-tui",
+  "versions": {
+    "nengo": "4.1.0",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "verifiers": "0.1.14",
+    "pydantic": "2.13.4"
+  },
+  "source_sha256": {
+    "environments/neural_forager/neural_forager/__init__.py": "2bff91d2a087b77cbf2d094c6b86a8db20c811af6d6c903bbc7506dce722aaa9",
+    "environments/neural_forager/neural_forager/agents.py": "2451602bc8a387d84d47530c19620d2fa845816813b8ee8630a8be2722156ce2",
+    "environments/neural_forager/neural_forager/audit/__init__.py": "b3994a816304e67e5e217ad8d315ab59379205c665393074f754e245e32802fe",
+    "environments/neural_forager/neural_forager/audit/config.py": "9ceeed5f49156b95a5d0a1e03b9d481539cedf3f1f8659663d9dfeb527f61611",
+    "environments/neural_forager/neural_forager/audit/memory.py": "d224a9dbff2e83b1eaf8784e254df42cbc0e4969846fc2c80d60983f2f6b8e28",
+    "environments/neural_forager/neural_forager/audit/runner.py": "8a1292b8c6aef72392fd829af8271bab44300e4b4d1731a7965e86d96714419d",
+    "environments/neural_forager/neural_forager/cli.py": "ae1800d0563a295b674ead652353e87219bbdd4ab98056b8cb41543a29a2bf70",
+    "environments/neural_forager/neural_forager/config.py": "386d5ee333bcd4d750c2c603c6a4ef041fbce2d896418b0ecc91c9a800cdc0ea",
+    "environments/neural_forager/neural_forager/experiment.py": "6a0332b9f8faf0a16f462d9d3e69cf0aba67cec507c445cc34007158b52bd6e5",
+    "environments/neural_forager/neural_forager/neural_forager.py": "5d8296a5fc69ba3cd8165aeebab795b8c029dd0b520e2dae52b7e76d70458cc1",
+    "environments/neural_forager/neural_forager/prime.py": "818d063ed84fc7c34ddeace3ea438537acf918358af0cf9fd5a9f3f734beaa2f",
+    "environments/neural_forager/neural_forager/research/__init__.py": "dccf12cf5fda4280784378353053d9277962f013d5ebead7d10968d3f44fd62a",
+    "environments/neural_forager/neural_forager/research/cli.py": "a30f6a09d3f4435ee82f5d7b6943649e55bd487de8aefa21d95a49b8c2453716",
+    "environments/neural_forager/neural_forager/research/config.py": "2f18dc4e4c12b0435de3b1637767ad8ff19d0e06ea128db4e606aa290ac6955a",
+    "environments/neural_forager/neural_forager/research/controller.py": "31adab1e2b57bb86fdd8c8f9bb272204ac2e67fd66d16afe0b4477cf5bb15cc8",
+    "environments/neural_forager/neural_forager/research/diagnosis.py": "b917f296b09a12db113a9471bd997a9d1ded14a9f046bfdc5923e424166606cb",
+    "environments/neural_forager/neural_forager/research/memory.py": "9628806ca9dfe3c4f4ffe203b44bb816cd0a6961252e96e490918dad41f7693d",
+    "environments/neural_forager/neural_forager/research/runner.py": "f1b7ebf531c0bb844696866e75b364103adeebf7fc74f30c065580ca766036ec",
+    "environments/neural_forager/neural_forager/research/sensors.py": "5f14a7b35d8de73d0a61fbe3f5aecf81832ed995be4009620b39fad61168d8a3",
+    "environments/neural_forager/neural_forager/server.py": "14bdd9825ec757d198f91d113ddcfd17d121ad221e15b6b16b6c2aa0f4b5a890",
+    "environments/neural_forager/neural_forager/world.py": "af929ee1bc2d3318160d6e3632cf83bb25fbcb02128d5c95c2fc2bbbb810f1c2",
+    "environments/neural_forager/audit/PROTOCOL.md": "3545d2a32d64214046bb975ad272f6cf9aaf88948292eb0ed1a7e90bda0b5929",
+    "configs/eval/neural-forager-audit.toml": "f322833d0fc40dce94d2cae497984e5176c38e2f3aa1bbb360934a8e4158a5f3"
+  }
+}

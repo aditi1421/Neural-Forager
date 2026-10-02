@@ -13,7 +13,9 @@ Two experiments live here:
   Matched controls separate update gating, localization correction, and neural
   versus conventional memory.
 
-Read the [research results](environments/neural_forager/research/REPORT.md),
+Read the [spiking-advantage audit](environments/neural_forager/audit/REPORT.md),
+[algorithmic-novelty review](environments/neural_forager/audit/NOVELTY.md),
+[original selective-memory results](environments/neural_forager/research/REPORT.md),
 [frozen protocol](environments/neural_forager/research/PROTOCOL.md), and
 [prior-art review](environments/neural_forager/research/LITERATURE.md).
 
@@ -60,6 +62,23 @@ For a fresh run, give that script the `results.jsonl` path printed by Prime.
 It checks that all 480 episodes are present and computes paired confidence
 intervals over independent maze seeds, rather than treating moves as samples.
 
+## Does spiking help?
+
+The follow-up audit replaces spikes with matched continuous firing rates, then
+transfers the same weights in both directions. It tests current noise, neuron
+loss, short reads, and reduced neuron counts on 16 fresh mazes: 1,024 memory
+assays and 384 navigation episodes. See the [audit report](environments/neural_forager/audit/REPORT.md)
+for the measured outcome and claim boundaries.
+
+```bash
+prime eval run configs/eval/neural-forager-audit-smoke.toml --disable-tui
+prime eval run configs/eval/neural-forager-audit.toml --disable-tui
+
+# Reproduce analysis from the committed full evidence:
+.venv/bin/python environments/neural_forager/audit/analyze.py \
+  environments/neural_forager/audit/prime-heldout.jsonl.gz --output /tmp/forager-audit
+```
+
 ## Tests
 
 ```bash
@@ -67,8 +86,9 @@ uv pip install --python .venv/bin/python -e 'environments/neural_forager[dev]'
 .venv/bin/python -m pytest environments/neural_forager/tests -q
 ```
 
-42 tests cover the world, real plastic weights, observations, localization,
-memory gates, reward edits, and dashboard sessions. See the
+51 tests cover the world, real plastic weights, observations, localization,
+memory gates, reward edits, dashboard sessions, matched rate controls, weight
+transfer, shared perturbations, cache invalidation, and paired statistical analysis. See the
 [implementation guide](environments/neural_forager/README.md) for architecture
 and the original foraging pilot.
 
